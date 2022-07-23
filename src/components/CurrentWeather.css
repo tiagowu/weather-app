@@ -1,0 +1,95 @@
+.weather-box-container {
+  margin: 25px 0px 10px 0px;
+  height: 200px;
+  border-radius: 1rem;
+  box-shadow: rgb(0 0 0 / 5%) 0 6px 24px 0, rgb(0 0 0 / 8%) 0 0 0 1px;
+  text-align: center;
+  width: 75%;
+  padding: 15px 0px 15px 0px;
+}
+
+.weather-box-container .left-weather-box {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  height: 100%;
+  width: 200px;
+}
+
+.weather-box-container .right-weather-box {
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  width: 300px;
+  height: 100%;
+}
+
+.left-weather-box .weather-icon {
+  vertical-align: top;
+  height: 80px;
+}
+
+.left-weather-box .temp {
+  display: inline-block;
+  line-height: 80px;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.weather-info div {
+  font-size: 20px;
+  line-height: 25px;
+  padding-left: 15px;
+}
+
+.right-weather-box .location {
+  padding: 15px 0px 0px 0px;
+  font-size: 20px;
+}
+
+.location .city {
+  font-size: 40px;
+}
+
+.right-weather-box .date {
+  margin-top: 5px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 800px) {
+  .weather-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+  }
+
+  .weather-box-container .left-weather-box {
+    display: flex;
+    order: 2;
+    padding: 0;
+  }
+
+  .weather-box-container .right-weather-box {
+    display: flex;
+    order: 1;
+    padding: 0;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+  }
+
+  .right-weather-box .location {
+    font-size: 16px;
+  }
+
+  .right-weather-box .date {
+    font-size: 16px;
+  }
+
+  .weather-info div {
+    display: none;
+  }
+}
