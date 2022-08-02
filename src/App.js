@@ -41,13 +41,16 @@ function App() {
   }, [location.lat, location.long]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleClick = () => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLocation({
-        lat: position.coords.latitude,
-        long: position.coords.longitude,
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setLocation({
+          lat: position.coords.latitude,
+          long: position.coords.longitude,
+        });
+        setName(null);
+        console.log("Point:" + position.coords.latitude + ", " + position.coords.longitude);
       });
-      setName(null);
-    });
+    }
   };
 
   const handlePlaceSelect = (value) => {
