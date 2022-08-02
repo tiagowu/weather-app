@@ -57,6 +57,12 @@
   line-height: 25px;
 }
 
+@media screen and (max-width: 500px) {
+  .weather-box-container {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .weather-box-container {
     display: flex;

@@ -54,6 +54,12 @@
   width: 10px;
 }
 
+@media screen and (max-width: 500px) {
+  .forecast-box-container {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .forecast-box {
     flex-direction: column;
